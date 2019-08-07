@@ -1,0 +1,1 @@
+# ee-application-multi-module-gradle-template
