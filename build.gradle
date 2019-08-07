@@ -3,10 +3,7 @@ defaultTasks 'clean', 'build'
 subprojects {
     ext.libraryVersions = [
         javaee                  : '8.0',
-        wildfly                 : '14.0.1.Final',
-        junit                   : '4.11',
-        arquillian              : '1.1.8.Final',
-        shrinkWrapResolverGradle: '2.2.0-beta-1'
+        wildfly                 : '16.0.0.Final',
     ]
     
     apply plugin: 'war'
@@ -19,6 +16,6 @@ subprojects {
     }
     
     dependencies {
-        providedCompile 'javax:javaee-api:8.0'
+        providedCompile "javax:javaee-api:${libraryVersions.javaee}"
     }
 }
