@@ -1,0 +1,17 @@
+apply plugin: 'ear'
+
+dependencies {
+    compile project(':module2:module2-api')
+    deploy project(path:':module2:module2-core')
+    add ('earlib', project(':module2:module2-api')) { transitive = false }
+}
+
+ear {
+    excludes = ["org", "META-INF"]
+    deploymentDescriptor {
+        applicationName = "main-logic"
+        initializeInOrder = false
+        displayName = "main-logic"
+        description = "main logic module"
+    }
+}

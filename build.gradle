@@ -1,0 +1,24 @@
+apply plugin: 'java'
+defaultTasks 'clean', 'build'
+subprojects {
+    ext.libraryVersions = [
+        javaee                  : '8.0',
+        wildfly                 : '14.0.1.Final',
+        junit                   : '4.11',
+        arquillian              : '1.1.8.Final',
+        shrinkWrapResolverGradle: '2.2.0-beta-1'
+    ]
+    
+    apply plugin: 'war'
+    group = 'org.kostenko'
+    version = '0.1'
+    defaultTasks 'clean', 'build'
+    
+    repositories {
+        jcenter()
+    }
+    
+    dependencies {
+        providedCompile 'javax:javaee-api:8.0'
+    }
+}
