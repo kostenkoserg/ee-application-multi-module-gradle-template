@@ -20,7 +20,7 @@ import org.kostenko.examples.ee.template.api.TestService;
 @Produces(MediaType.APPLICATION_JSON)
 public class TestEndpoint {
 
-    @EJB(lookup = TestService.TOURNAMENT_SERVICE_JNDI)
+    @EJB(lookup = TestService.TEST_SERVICE_JNDI)
     TestService testService;
     
     @GET

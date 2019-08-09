@@ -11,7 +11,7 @@ import javax.persistence.PersistenceContext;
  * @author kostenko
  */
 @Remote(TestService.class)
-@Stateless(name = TestService.TOURNAMENT_SERVICE_NAME)
+@Stateless(name = TestService.TEST_SERVICE_NAME)
 public class TestServiceImpl implements TestService {
 
     @PersistenceContext
