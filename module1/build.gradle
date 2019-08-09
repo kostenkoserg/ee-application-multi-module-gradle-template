@@ -1,5 +1,5 @@
 apply plugin: 'war'
-
 dependencies {
     compile project(':module2:module2-api')
+    providedCompile "javax:javaee-api:${libraryVersions.javaee}"
 }

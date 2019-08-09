@@ -1,21 +1,10 @@
-apply plugin: 'java'
 defaultTasks 'clean', 'build'
 subprojects {
     ext.libraryVersions = [
         javaee                  : '8.0',
-        wildfly                 : '16.0.0.Final',
     ]
-    
-    apply plugin: 'war'
-    group = 'org.kostenko'
-    version = '0.1'
     defaultTasks 'clean', 'build'
-    
     repositories {
         jcenter()
-    }
-    
-    dependencies {
-        providedCompile "javax:javaee-api:${libraryVersions.javaee}"
     }
 }

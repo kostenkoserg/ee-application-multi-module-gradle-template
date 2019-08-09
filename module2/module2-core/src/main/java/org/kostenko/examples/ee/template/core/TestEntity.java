@@ -1,4 +1,4 @@
-package org.kostenko.examples.ee.gradle.core;
+package org.kostenko.examples.ee.template.core;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -34,7 +34,4 @@ public class TestEntity {
     public void setName(String name) {
         this.name = name;
     }
-  
-  
-
 }
